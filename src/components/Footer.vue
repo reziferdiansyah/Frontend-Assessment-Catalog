@@ -1,0 +1,27 @@
+<template>
+    <div class="footer">© 2024 Allrights reserved. Developed by {{ DummyDataName }}</div>
+</template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      DummyDataName: 'Rezi Ferdiansyah',
+    };
+  },
+};
+</script>
+
+<style scoped>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #111010;
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
+</style>
