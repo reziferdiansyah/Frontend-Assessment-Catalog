@@ -1,13 +1,16 @@
 <template>
+  <div class="banner">
     <Carousel :autoplay="2000" :wrap-around="true">
-      <Slide v-for="slide in 5" :key="slide">
-        <div class="carousel__item">{{ slide }}</div>
+      <Slide v-for="slide in fetchStaticImg" :key="id">
+        <img :src="slide.path" :alt="slide.alt ">
+        <!-- <div class="carousel__item">{{ slide.alt }}</div> -->
       </Slide>
   
       <template #addons>
         <Pagination />
       </template>
     </Carousel>
+  </div>
   </template>
   
   <script>
@@ -22,6 +25,40 @@
       Slide,
       Pagination,
     },
+
+    data() {
+    const staticImages = [
+      {
+        id: 1,
+        type: "mobile",
+        path: "",
+        alt: "Images 1",
+      },
+      {
+        id: 2,
+        type: "mobile",
+        path: "",
+        alt: "Images 2",
+      },
+      {
+        id: 3,
+        type: "mobile",
+        path: "",
+        alt: "Images 3",
+      },
+    ];
+    return {
+      currentSlide: 0,
+      fetchStaticImg: staticImages,
+    };
+  },
   })
   </script>
+
+<style scoped>
+.banner {
+  padding: 20px;
+  background-color: red;
+}
+</style>
   
