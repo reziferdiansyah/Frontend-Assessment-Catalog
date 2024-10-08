@@ -94,7 +94,7 @@ export default {
 
 <style scoped>
 .box-images-products { 
-  background-color: red;
+  background-color: white;
   padding: 20px;
 }
 .text-content-info{
@@ -102,7 +102,7 @@ export default {
   text-align: center;
 }
 .wrap-card {
-  padding: 40px;
+  padding: 35px;
   overflow-y: scroll;
   margin-bottom: 50px;
 }
@@ -110,7 +110,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* Card Shoes */
@@ -121,6 +121,10 @@ export default {
     border: 1px solid gray;
     /* border-radius: 5px; */
     cursor: pointer;
+}
+
+.card:hover {
+   background-color: whitesmoke;
 }
 
 @media (max-width: 768px) {
