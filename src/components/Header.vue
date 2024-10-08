@@ -1,5 +1,9 @@
 <template>
-    <div class="header">Header Here Progress</div>
+    <div class="fixed-header">
+        <div class="container">
+          Header Here....
+        </div>
+    </div>
 </template>
 
 
@@ -13,10 +17,20 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
-}
+.container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+        justify-content: center;
+        text-align: center;
+    }
+    .fixed-header{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+        left: 0;
+        top: 0;
+
+    }
 </style>

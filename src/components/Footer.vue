@@ -19,7 +19,7 @@ export default {
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: #111010;
+   background: #333;
    color: white;
    text-align: center;
    padding: 20px;
