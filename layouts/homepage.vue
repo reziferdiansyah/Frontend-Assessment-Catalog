@@ -3,7 +3,7 @@
     <div>
       <Header /> 
     </div>
-    <div style="margin-top: 80px;background-color: red;">
+    <div style="margin-top: 60px;">
        <NuxtPage/>
     </div>
     <div>

@@ -1,6 +1,8 @@
 <template>
   <div class="wrap-about">
     <div class="grid-container">
+    <h1>The story behind</h1>
+    <div>{{ fetchStaticDataStory }}</div>
     <h1>VISI</h1>
     <div>{{ fetchStaticDataVisi }}</div>
     <h1>MISI</h1>  
@@ -22,28 +24,34 @@ export default {
       const staticMisi = [
         {
           id: 1,
-          description : "Berinvestasi dalam pengembangan produk berkarakter serta memperhatikan kriteria untuk menjadi yang terbaik.",
+          description : "Investing in developing products with character and paying attention to the criteria to be the best.",
         },
         {
           id: 2,
-          description : "Mengembangkan sistem waralaba, e-commerce.",
+          description : "Reading franchise systems, e-commerce.",
         },
         {
           id: 3,
-          description : "Memperluas cakupan kriteria produk  tema, untuk teknis, lifestyle dan adventure.",
+          description : "Expanding the scope of theme product criteria, to technical, lifestyle.",
         },
         {
           id: 4,
-          description : "Memperluas pemasaran produk di showroom dan online.",
+          description : "Expanding product marketing in showrooms and online.",
         },
         {
           id: 5,
-          description : "Menyediakan produk-produk berkualitas dan memuaskan untuk kebutuhan pelanggan.",
+          description : "Providing quality and satisfying products for customer needs.",
+        },
+        {
+          id: 6,
+          description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         },
       ];
       return {
         fetchStaticDataMisi: staticMisi,
-        fetchStaticDataVisi : 'Menjadi sebuah produk mendunia dalam produk khususnya lifestyle. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+        fetchStaticDataVisi : 'Becoming a global product in products, especially lifestyle. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        fetchStaticDataStory : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+        
       };
     },
   };
