@@ -2,7 +2,7 @@
     <div class="wrap-card">
      <div style="text-align: center;">
           <h1 style="text-transform: uppercase;">
-        our products
+            our products
           </h1>
       </div>
       <div class="card-container">
@@ -13,10 +13,10 @@
         </div>
         <p>
          {{ datas.description }}
-              </p>
-              <p>
+        </p>
+        <p>
          RP : {{ datas.price }}
-              </p>
+        </p>
       </div>
           </div>
       </div>
@@ -56,34 +56,34 @@
           path: "https://cutoff.id/cdn/shop/files/PRIMEINDIGOLP1.jpg?v=1684647337",
           alt: "Images 4",
         },
-        {
-          id: 5,
-          price : "40,000",
-          description : "Lorem ipsum 5",
-          path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
-          alt: "Images 5",
-        },
-        {
-          id: 6,
-          price : "40,000",
-          description : "Lorem ipsum 6",
-          path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
-          alt: "Images 6",
-        },
-        {
-          id: 7,
-          price : "40,000",
-          description : "Lorem ipsum 7",
-          path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
-          alt: "Images 7",
-        },
-        {
-          id: 8,
-          price : "40,000",
-          description : "Lorem ipsum 8",
-          path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
-          alt: "Images 8",
-        },
+        // {
+        //   id: 5,
+        //   price : "40,000",
+        //   description : "Lorem ipsum 5",
+        //   path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
+        //   alt: "Images 5",
+        // },
+        // {
+        //   id: 6,
+        //   price : "40,000",
+        //   description : "Lorem ipsum 6",
+        //   path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
+        //   alt: "Images 6",
+        // },
+        // {
+        //   id: 7,
+        //   price : "40,000",
+        //   description : "Lorem ipsum 7",
+        //   path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
+        //   alt: "Images 7",
+        // },
+        // {
+        //   id: 8,
+        //   price : "40,000",
+        //   description : "Lorem ipsum 8",
+        //   path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
+        //   alt: "Images 8",
+        // },
       ];
       return {
         fetchStaticData: staticProducts,

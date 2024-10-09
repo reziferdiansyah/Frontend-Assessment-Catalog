@@ -7,6 +7,7 @@
        <ul class="menu" style="text-transform: uppercase;">
          <li><a href="/">home</a></li>
          <li><a href="/about">about us</a></li>
+         <li><a href="/products/detail">Detail</a></li>
       </ul>
      </header>
 </template>
