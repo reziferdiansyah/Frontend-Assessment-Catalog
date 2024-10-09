@@ -135,7 +135,7 @@ export default {
 
 @media (max-width: 480px) {
     .card {
-        flex: 1 1 calc(100% - 20px);
+        flex: 1 1 calc(50% - 20px);
     }
 }
 /* Card Shoes */
