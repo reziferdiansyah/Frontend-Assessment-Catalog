@@ -110,33 +110,26 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* padding: 20px; */
 }
-
-/* Card Shoes */
 .card {
-    /* flex: 1 1 calc(33.33% - 20px); */
     flex: 1 1 calc(25% - 20px);
     box-sizing: border-box;
-    border: 1px solid gray;
-    /* border-radius: 5px; */
+    border: 1.5px solid whitesmoke;
     cursor: pointer;
 }
-
 .card:hover {
    background-color: whitesmoke;
 }
-
+/* Desktop Version */
 @media (max-width: 768px) {
     .card {
         flex: 1 1 calc(50% - 20px);
     }
 }
-
+/* Mobile Version */
 @media (max-width: 480px) {
     .card {
         flex: 1 1 calc(50% - 20px);
     }
 }
-/* Card Shoes */
 </style>
