@@ -64,7 +64,6 @@ export default {
     margin-bottom: 50px;
 }
 .grid-container {
-  background-color: mintcream;
   display: grid;
   gap: 50px;
   grid-template-columns: auto auto;
