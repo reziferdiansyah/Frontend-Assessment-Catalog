@@ -3,6 +3,9 @@
         <div class="container">
           Header Here....
         </div>
+        <!-- <NuxtLink to="/">Home</NuxtLink>
+        <br>
+        <NuxtLink to="/about">About</NuxtLink> -->
     </div>
 </template>
 
