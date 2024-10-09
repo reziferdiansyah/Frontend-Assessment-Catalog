@@ -1,14 +1,13 @@
 <template>
   <div>
-    <div class="header">
-      <Header />
+    <div>
+      <Header /> 
     </div>
-    <div class="mt-36 xl:mt-40">
-      <!-- <Nuxt /> -->
+    <div style="margin-top: 80px;background-color: red;">
        <NuxtPage/>
     </div>
     <div>
-      <Footer />
+      <Footer /> 
     </div>
   </div>
 </template>
