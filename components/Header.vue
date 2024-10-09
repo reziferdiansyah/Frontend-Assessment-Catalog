@@ -23,7 +23,7 @@ export default {
 
 <style scoped>
 a {
-  color: #000;
+  color: white;
 }
 /* header */
 .header {
@@ -40,17 +40,17 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #333;
 }
 .header li a {
   display: block;
   padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
+  border-right: 1px solid #333;
   text-decoration: none;
 }
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4;
+  background-color: #444;
 }
 .header .logo {
   display: block;
