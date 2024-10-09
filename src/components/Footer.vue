@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">© 2024 Allrights reserved. Developed by {{ DummyDataName }}</div>
+    <div class="footer">© Developed by {{ DummyDataName }}</div>
 </template>
 
 
