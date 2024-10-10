@@ -13,7 +13,7 @@
           <img style="width: 100%; height: 100%;" :src="datas.path" :alt="datas.alt">
         </div>
         <p>
-         {{ datas.description }}
+         {{ datas.name }}
         </p>
         <p>
          RP : {{ datas.price }}
@@ -28,43 +28,12 @@
   <script>
   export default {
     data() {
-      const staticProducts = [
-        {
-          id: 1,
-          price : "10,000",
-          description : "Lorem ipsum 1",
-          path: "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/2310f917cea6690cc9b3805e939d5121.jpg?imageView2/2/w/800/q/70/format/webp",
-          alt: "Images 1",
-        },
-        {
-          id: 2,
-          price : "20,000",
-          description : "Lorem ipsum 2",
-          path: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSFfPGlrOpbxIhVkdcZYlBksgwMJVP_823XjqQBhnB1LTPB6vNtFwd0KNSGAKCJ4I38Pjl16z1E8gZRJfOwa12jn2sJBfwiHw9S3D3niApTWN3BYO_8JCiSYg&usqp=CAc",
-          alt: "Images 2",
-        },
-        {
-          id: 3,
-          price : "30,000",
-          description : "Lorem ipsum 3",
-           path: "https://areioutdoorgear.co.id/wp-content/uploads/2022/12/IMG-20211113-WA0053.jpg",
-          alt: "Images 3",
-        },
-        {
-          id: 4,
-          price : "40,000",
-          description : "Lorem ipsum 4",
-          path: "https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/b4e1c844-ed47-4deb-bcac-a52b8359cd9d.jpg",
-          alt: "Images 4",
-        },
-      ];
       return {
-        fetchStaticData: staticProducts,
         productsList : '',
       };
     },
     async mounted() {
-    this.productsList = await $fetch('https://dummyjson.com/c/599a-3f4b-4d0d-afba')
+    this.productsList = await $fetch('https://dummyjson.com/c/4818-ca90-4949-8844')
   },
   };
   </script>
