@@ -1,44 +1,42 @@
 <template>
 <div class="wrap-detail">
  <p style="margin-bottom: 20px;"> <a href="/">Home</a> > Products > Name Products </p>
- <div class="card-wrapper">
-  <div class="card">
-    <!-- card left -->
+  <!-- CARD CONTENT -->
+   <div class="card-wrapper">
+    <div class="card">
+    <!-- CARD LEFT PREVIES IMAGES -->
     <div class="product-imgs">
-      <div class="img-display">
-        <div class="img-showcase">
-          <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
-          <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
-          <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
-          <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
+    <!-- BIG -->
+     <Carousel 
+      :autoplay="5000"
+      id="gallery"
+      :items-to-show="1"
+      :wrap-around="true" v-model="currentSlide">
+     <Slide v-for="slide in fetchStaticImg" :key="slide.id">
+       <div class="carousel__item">
+          <img  style="width: 320px !important; height: 320px !important;" :alt="slide.alt" :src="slide.path" />
         </div>
+     </Slide>
+    </Carousel>
+    <!-- PREVIEW -->
+    <Carousel
+    id="thumbnails"
+    :items-to-show="3"
+    :wrap-around="true"
+    v-model="currentSlide"
+    ref="carousel"
+  >
+    <Slide v-for="slideThumbnails in fetchStaticImg" :key="slideThumbnails.id">
+      <div class="carousel__item" @click="slideTo(slideThumbnails.id - 1)">
+          <img style="width: 150px !important; height: 150px !important;" :alt="slideThumbnails.alt" :src="slideThumbnails.path" />
       </div>
-      <div class="img-select">
-        <div class="img-item">
-          <a href = "#" data-id = "1">
-            <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
-          </a>
-        </div>
-        <div class="img-item">
-          <a href = "#" data-id = "2">
-            <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
-          </a>
-        </div>
-        <div class="img-item">
-          <a href = "#" data-id = "3">
-            <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
-          </a>
-        </div>
-        <div class="img-item">
-          <a href = "#" data-id = "4">
-            <img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
-          </a>
-        </div>
-      </div>
-    </div>
+    </Slide>
+   </Carousel>
+   </div>
+  <!-- CAROUSEL IMAGES -->
 
-    <!-- card right -->
-    <div>
+     <!-- CARD RIGHT INFORMATION -->
+     <div>
       <div class="name-product">Name Products</div>
    
       <div class="product-price">
@@ -65,20 +63,63 @@
         </button>
       </div>
     </div>
+   </div>
   </div>
-</div>
 </div>
 </template>
   
 <script>
+import { defineComponent } from 'vue'
+import { Carousel, Slide } from 'vue3-carousel'
+
+import 'vue3-carousel/dist/carousel.css'
   definePageMeta({
      layout: 'homepage'
   })
   export default {
+     components: {
+     Carousel,
+     Slide,
+    },
       data() {
+
+      const staticImages = [
+      {
+        id: 1,
+        type: "mobile",
+        path: "https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/58f8628e-0e3e-4896-94b0-afc8ebc32c79.jpg",
+        alt: "Images 1",
+      },
+      {
+        id: 2,
+        type: "mobile",
+        path: "https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/a0663f7d-cc30-48e4-8306-98809148b569.jpg",
+        alt: "Images 2",
+      },
+      {
+        id: 3,
+        type: "mobile",
+        path: "https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/6ed02914-d48c-4963-b23c-c9206b56b604.jpg",
+        alt: "Images 3",
+      },
+      {
+        id: 4,
+        type: "mobile",
+        path: "https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/751f514c-af22-4a26-85e3-86dde4218c2b.jpg",
+        alt: "Images 3",
+      },
+      {
+        id: 5,
+        type: "mobile",
+        path: "https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/6660e58a-c0db-4a33-bbec-c695624f7d66.jpg",
+        alt: "Images 3",
+      },
+    ];
         return {
           AmountData : 1,
-          SizeData : 30
+          SizeData : 30,
+          currentSlide: 0,
+          fetchStaticImg: staticImages,
         };
       },
       methods: { 
@@ -86,8 +127,11 @@
           const SizeFix = this.SizeData
           const AmoutFix = this.AmountData
           alert(`Amount ${AmoutFix} and Size ${SizeFix} Already add to Cart`);
+        },
+        slideTo(val) {
+         this.currentSlide = val;
+        },
       }
-       }
     };
 
 </script>
