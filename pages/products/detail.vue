@@ -28,7 +28,7 @@
   >
     <Slide v-for="slideThumbnails in fetchStaticImg" :key="slideThumbnails.id">
       <div class="carousel__item" @click="slideTo(slideThumbnails.id - 1)">
-          <img style="width: 120px !important; height: 120px !important;" :alt="slideThumbnails.alt" :src="slideThumbnails.path" />
+          <img style="width: 100px !important; height: 100px !important;" :alt="slideThumbnails.alt" :src="slideThumbnails.path" />
       </div>
     </Slide>
    </Carousel>
