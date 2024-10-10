@@ -7,7 +7,7 @@
           </h1>
       </div>
       <div class="card-container">
-          <div v-for="datas in productsList.data" class="card">
+          <div v-for="datas in productsList.data" class="card" @click="goToPasaran">
       <div class="text-content-info">
         <div class="box-images-products"> 
           <img style="width: 100%; height: 100%;" :src="datas.path" :alt="datas.alt">
@@ -33,8 +33,13 @@
       };
     },
     async mounted() {
-    this.productsList = await $fetch('https://dummyjson.com/c/4818-ca90-4949-8844')
-  },
+      this.productsList = await $fetch('https://dummyjson.com/c/4818-ca90-4949-8844')
+    },
+    methods: {
+      goToPasaran() {
+        this.$router.push('/products/detail')
+      },
+    } 
   };
   </script>
   
