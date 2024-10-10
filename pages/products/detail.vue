@@ -38,35 +38,28 @@
     </div>
 
     <!-- card right -->
-    <div class="product-content">
-      <h2 class="product-title">Type Products</h2>
-      <a href = "#" class="product-link">Name Products</a>
-      <div class="product-rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star-half-alt"></i>
-        <span>4.7(21)</span>
-      </div>
-
+    <div>
+      <div class="name-product">Name Products</div>
+   
       <div class="product-price">
         <p class="new-price">Price: <span>RP. 2.490.000</span></p>
       </div>
 
       <div class="product-detail">
         <h2>about this item: </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
-        <p><b>Color:</b> <span>Black</span></p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p><b>Color: </b> <span>Black</span></p>
         <p><b>Available</b>: <span>in stock</span></p>
-        <p><b>Category:</b><span>Shoes</span></p>
-        <p><b>Shipping Area:</b> <span>All over the world</span></p>
-        <p><b>Shipping Fee:</b> <span>Free</span></p>
+        <p><b>Size</b>: <span>Available From 30 to 50</span></p>
+        <p><b>Category: </b><span>Shoes</span></p>
+        <p><b>Shipping Area: </b> <span>All over the world</span></p>
+        <p><b>Shipping Fee: </b> <span>Free</span></p>
       </div>
 
       <div class="purchase-info">
-        <input type="number" min="0" value="1">
+       Amount : <input type="number" placeholder="Amount" min="0" v-model="AmountData">
+       Size : <input type="number" placeholder="Size" min="30" max="50" v-model="SizeData">
+       <br>
           <button  @click="myFunction" type="button" class="btn">
           Add to Cart <i class="fas fa-shopping-cart"></i>
         </button>
@@ -84,11 +77,15 @@
   export default {
       data() {
         return {
+          AmountData : 1,
+          SizeData : 30
         };
       },
       methods: { 
         myFunction() {
-          alert("Already add to Cart");
+          const SizeFix = this.SizeData
+          const AmoutFix = this.AmountData
+          alert(`Amount ${AmoutFix} and Size ${SizeFix} Already add to Cart`);
       }
        }
     };
@@ -103,7 +100,6 @@
     padding: 35px;
     overflow-y: scroll;
     margin-bottom: 50px;
-    background-color: blue;
 }
 .card-wrapper{
     max-width: 1100px;
@@ -138,48 +134,22 @@ img{
 .img-item:hover{
     opacity: 0.8;
 }
-.product-content{
-    padding: 2rem 1rem;
-}
-.product-title{
-    font-size: 3rem;
-    text-transform: capitalize;
-    font-weight: 700;
-    position: relative;
-    color: #12263a;
-    margin: 1rem 0;
-}
-.product-title::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 4px;
-    width: 80px;
-    background: #12263a;
-}
-.product-link{
+.name-product{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 1.9rem;
     display: inline-block;
     margin-bottom: 0.5rem;
-    background: #256eff;
+    background: #ff4d25;
     color: #fff;
     padding: 0 0.3rem;
     transition: all 0.5s ease;
 }
-.product-link:hover{
+.name-product:hover{
     opacity: 0.9;
 }
-.product-rating{
-    color: #ffc107;
-}
-.product-rating span{
-    font-weight: 600;
-    color: #252525;
-}
+
 .product-price{
     margin: 1rem 0;
     font-size: 1rem;
@@ -193,7 +163,7 @@ img{
     text-decoration: line-through;
 }
 .new-price span{
-    color: #256eff;
+    color:  #ff4d25;
 }
 .product-detail h2{
     text-transform: capitalize;
@@ -205,9 +175,6 @@ img{
     padding: 0.3rem;
     opacity: 0.8;
 }
-
-
-
 .purchase-info{
     margin: 1.5rem 0;
 }
@@ -228,11 +195,8 @@ img{
     cursor: pointer;
     color: #fff;
 }
-.purchase-info .btn:first-of-type{
-    background: #256eff;
-}
 .purchase-info .btn:last-of-type{
-    background: #f64749;
+    background: #333;
 }
 .purchase-info .btn:hover{
     opacity: 0.9;
@@ -253,9 +217,6 @@ img{
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-    .product-content{
-        padding-top: 0;
     }
 }
 </style>
