@@ -1,6 +1,6 @@
 <template>
 <div class="wrap-detail">
- <p style="margin-bottom: 20px;"> <a href="/">Home</a> > Products > Name Products </p>
+ <p style="margin-bottom: 20px;"> <a href="/">Home</a> > Products > Detail </p>
   <!-- CARD CONTENT -->
    <div class="card-wrapper">
     <div class="card">

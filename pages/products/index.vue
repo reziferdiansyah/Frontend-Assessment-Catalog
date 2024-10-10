@@ -15,7 +15,7 @@
         <p>
          {{ datas.name }}
         </p>
-        <p>
+        <p style="color: #ff4d25;">
          RP : {{ datas.price }}
         </p>
       </div>
