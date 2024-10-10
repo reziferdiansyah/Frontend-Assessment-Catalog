@@ -1,12 +1,13 @@
 <template>
    <div class="wrap-card">
+    <!-- LIST  -->
      <div style="text-align: center;">
           <h1 style="text-transform: uppercase;">
             our products
           </h1>
       </div>
       <div class="card-container">
-          <div v-for="datas in fetchStaticData" class="card">
+          <div v-for="datas in productsList.data" class="card">
       <div class="text-content-info">
         <div class="box-images-products"> 
           <img style="width: 100%; height: 100%;" :src="datas.path" :alt="datas.alt">
@@ -59,8 +60,12 @@
       ];
       return {
         fetchStaticData: staticProducts,
+        productsList : '',
       };
     },
+    async mounted() {
+    this.productsList = await $fetch('https://dummyjson.com/c/599a-3f4b-4d0d-afba')
+  },
   };
   </script>
   
