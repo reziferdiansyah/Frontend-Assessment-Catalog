@@ -217,7 +217,6 @@ img{
 .product-detail p{
     font-size: 0.9rem;
     padding: 0.3rem;
-    opacity: 0.8;
 }
 .purchase-info{
     margin: 1.5rem 0;
