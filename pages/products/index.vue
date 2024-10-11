@@ -68,7 +68,7 @@
       </div>
       <div class="product-detail">
         <h2>about this item: </h2>
-        <p>{{ dataDetailShow.name }}</p>
+        <p>{{ dataDetailShow.description }}</p>
         <p><b>Color: </b> <span>{{ dataDetailShow.color }}</span></p>
         <p><b>Available</b>: <span>{{ dataDetailShow.available }}</span></p>
         <p><b>Size</b>: <span>{{ dataDetailShow.size }}</span></p>
@@ -112,7 +112,7 @@ import 'vue3-carousel/dist/carousel.css'
       };
     },
     async mounted() {
-      this.productsList = await $fetch('https://dummyjson.com/c/20fa-8ce2-450a-a596')
+      this.productsList = await $fetch('https://dummyjson.com/c/7844-41ab-4df6-9002')
     },
     methods: {
       goToDetailProducts(datas) {
