@@ -10,7 +10,7 @@
           <div v-for="datas in productsList.data" class="card" @click="goToDetailProducts(datas)">
       <div class="text-content-info">
         <div class="box-images-products"> 
-          <img style="width: 100%; height: 100%;" :src="datas.path" :alt="datas.alt">
+          <img style="width: 100% !important; height: 100% !important;" :src="datas.path" :alt="datas.alt">
         </div>
         <p>
          {{ datas.name }}
@@ -29,7 +29,7 @@
  <p style="margin-bottom: 20px;"> <a style="text-decoration:underline; cursor: pointer;" @click="gotoHome">Home</a> > Products > Detail </p>
   <!-- CARD CONTENT -->
    <div class="card-wrapper">
-    <div class="card">
+    <div class="card-detail">
     <!-- CARD LEFT PREVIES IMAGES -->
     <div class="product-imgs">
     <!-- BIG -->
@@ -286,7 +286,7 @@ img{
     opacity: 0.9;
 }
 @media screen and (min-width: 992px){
-    .card{
+    .card-detail{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5rem;
