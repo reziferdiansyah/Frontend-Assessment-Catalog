@@ -118,7 +118,6 @@ import 'vue3-carousel/dist/carousel.css'
       goToDetailProducts(datas) {
         this.dataDetailShow = datas
         this.LisnotDetail = false
-        console.log('datas disini',datas.id)
       },
       gotoHome(){
         this.LisnotDetail = true
