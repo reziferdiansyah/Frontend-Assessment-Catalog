@@ -112,7 +112,7 @@ import 'vue3-carousel/dist/carousel.css'
       };
     },
     async mounted() {
-      this.productsList = await $fetch('https://dummyjson.com/c/7844-41ab-4df6-9002')
+      this.productsList = await $fetch('https://dummyjson.com/c/62c5-445c-4235-8500')
     },
     methods: {
       goToDetailProducts(datas) {
