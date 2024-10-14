@@ -34,7 +34,7 @@
     <div class="product-imgs">
     <!-- BIG -->
      <Carousel 
-      :autoplay="5000"
+      :autoplay="2000"
       id="gallery"
       :items-to-show="1"
       :wrap-around="true" v-model="currentSlide">
@@ -53,7 +53,8 @@
     ref="carousel"
   >
     <Slide v-for="(slideThumbnails, imageIndexDetail) in dataDetailShow.pathdetail" :key="dataDetailShow.id">
-      <div class="carousel__item" @click="slideTo(slideThumbnails.id - 1)">
+      <!-- <div class="carousel__item" @click="slideTo(slideThumbnails.id - 1)"> -->
+        <div class="carousel__item">
           <img style="width: 100px !important; height: 100px !important;" :alt="dataDetailShow.alt" :src="slideThumbnails" />
       </div>
     </Slide>
